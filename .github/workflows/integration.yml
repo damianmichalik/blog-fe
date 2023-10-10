@@ -30,3 +30,8 @@ jobs:
      - name: 'Docker auth'
        run: |-
          gcloud auth configure-docker ${{ secrets.GAR_LOCATION }}-docker.pkg.dev
+
+     - name: 'Build and push container'
+       run: |-
+         docker build -t "${{ secrets.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ env.APP }}/${{ env.APP }}:${{ github.sha }}" .
+         docker push "${{ secrets.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ env.APP }}/${{ env.APP }}:${{ github.sha }}"
