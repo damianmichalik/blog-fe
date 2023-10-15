@@ -4,8 +4,8 @@ export default function Home() {
     return (
         <main >
             <div>
-                <h1>GburTravel</h1>
-                <h2>Może nie najtaniej, ale jako tako</h2>
+                <h1>Blog</h1>
+                <h2>Test bloga na Next.js</h2>
             </div>
         </main>
     )

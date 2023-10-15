@@ -1,1 +1,1 @@
-GburTravel - Next.js
+Blog - Next.js
